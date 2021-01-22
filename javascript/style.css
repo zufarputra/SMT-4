@@ -1,7 +1,309 @@
-body {
-  background-color: greenyellow;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.logo img {
+  width: 45px;
+  display: block;
+  margin: auto;
+}
+.header {
+  margin: 1%;
+  background-color: cadetblue;
+}
+.nav-left,
+.nav-right {
+  background-color: whitesmoke;
+}
+.nav-left ul,
+.nav-right ul {
+  list-style: none;
+  background-color: cadetblue;
+}
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: slateblue;
+}
+.nav-left a:hover {
+  background: green;
+  border: 2px solid springgreen;
+  transition: 1s;
+}
+.nav-right a:hover {
+  background: green;
+  border: 2px solid springgreen;
+  transition: 1s;
+}
+@media screen and (min-width: 560px) {
+  .header {
+    width: 960px;
+    margin: auto;
+    display: flex;
+    margin-top: 1%;
+    justify-content: space-between;
+  }
+  .nav-left ul {
+    display: flex;
+  }
+  .nav-right ul {
+    display: flex;
+  }
+  .nav-left,
+  .nav-right {
+    background: none;
+  }
+  .nav-left a,
+  .nav-right a {
+    color: black;
+  }
+}
+/* main */
+.main {
+  margin-top: 25px;
+}
+.main-left img {
+  width: 250px;
+  display: block;
+  margin: auto;
+}
+.main-right {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-top: 25px;
+}
+@media (min-width: 560px) {
+  .main {
+    width: 960px;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .main-left img {
+    width: 600px;
+  }
+  .main-right {
+    margin: auto;
+    text-align: left;
+  }
+  .main-right h2 {
+    margin-bottom: 5px;
+    font-size: 34px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+}
+/*produk*/
+.display {
+  margin-top: 3%;
+  text-align: center;
+  color: blue;
+}
+.image img {
+  width: 250px;
+  display: block;
+  margin: auto;
+}
+.produk-content {
+  text-align: center;
+  margin: 20px;
+}
+.deskripsi p {
+  font-size: 17px;
+}
+@media (min-width: 560px) {
+  .display,
+  .produk {
+    width: 960px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .produk-content {
+    height: 300px;
+  }
+  .image {
+    height: 200px;
+    width: 200px;
+  }
+  .image img {
+    width: 200px;
+    display: block;
+    margin: auto;
+  }
+  .display {
+    font-size: 25px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .btn-beli > button {
+    font-size: large;
+    width: 50px;
+    height: 30px;
+  }
+}
+/* informasi */
+.info {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.info-content {
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.icon img {
+  width: 50px;
+  display: block;
+  margin-right: 10px;
+}
+.info-isi h2 {
+  font-size: 15px;
+}
+.info-isi p {
+  font-size: 13px;
+}
+@media (min-width: 560px) {
+  .info {
+    width: 960px;
+    margin: auto;
+    justify-content: space-between;
+  }
+  .info-content {
+    margin-top: 100px;
+  }
+}
+/* medsos */
+.medsos {
+}
+.medsos-icon img {
+  width: 30px;
+  margin: 10px;
+}
+.medsos-icon {
+  display: flex;
+  justify-content: center;
 }
 
-.container {
+.medsos-isi {
   text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+.medsos-form {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medsos-form form input {
+  width: 200px;
+  height: 25px;
+  background-color: white;
+  border: 2px solid red;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: -3px;
+  color: ;
+}
+.medsos-form form input[type="email"] {
+  padding: 10px;
+}
+
+.medsos-form form button {
+  height: 28px;
+  margin-left: 0px;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 2px solid red;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+@media (min-width: 560px) {
+  .medsos {
+    width: 960px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+/* footer */
+footer {
+  margin-bottom: 100px;
+  background: slategray;
+  color: aliceblue;
+  display: flex;
+}
+.logo-bank img {
+  width: 70px;
+}
+.identitas {
+  flex: 1;
+}
+.sitemap {
+  flex: 1;
+}
+.sitemap li a {
+  text-decoration: none;
+  color: white;
+}
+.sitemap li {
+  list-style: none;
+  padding-top: 8px;
+}
+.payment {
+  flex: 1;
+}
+.sitemap h2,
+.identitas h2 {
+  font-size: 14px;
+}
+.identitas p {
+  font-size: 12px;
+}
+.sitemap a {
+  font-size: 12px;
+}
+.bank p {
+  font-size: 10px;
+}
+.bank h3 {
+  font-size: 12px;
+}
+
+.bank {
+  padding-bottom: 16px;
+}
+@media (min-width: 560px) {
+  footer {
+    width: 960px;
+    margin: auto;
+    padding: 15px;
+  }
+  .sitemap h2,
+  .identitas h2 {
+    font-size: 16px;
+  }
+  .identitas p {
+    font-size: 14px;
+  }
+  .sitemap a {
+    font-size: 14px;
+  }
+  .bank p {
+    font-size: 12px;
+  }
+  .bank h3 {
+    font-size: 14px;
+  }
 }

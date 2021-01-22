@@ -1,0 +1,20 @@
+[
+    {
+    "idmenu" : 1,
+    "idkategori" : 1,
+    "menu" : "Apel Manadong",
+    "harga" : 4000,
+    "warna" : ["merah","hijau","ungu"],
+    "stok" : true,
+    "keterangan" : null
+    },
+    {
+        "idmenu" : 2,
+        "idkategori" : 2,
+        "menu" : "Semangka Manadong",
+        "harga" : 5000,
+        "warna" : ["merah","hijau","kuning"],
+        "stok" : false,
+        "keterangan" : null
+        }
+]
