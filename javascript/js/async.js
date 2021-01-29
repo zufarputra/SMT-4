@@ -14,5 +14,5 @@ async function tampil(){
     });
 
     out += "</ul>";
-    document.querySelector("#isi").innerHTML = out;
+    document.querySelector("#isi").innerHTML = out; 
 }
