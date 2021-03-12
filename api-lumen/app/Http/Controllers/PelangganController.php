@@ -32,12 +32,15 @@ class PelangganController extends Controller
             'pelanggan' => 'required',
             'alamat' => 'required',
             'telp' => 'required | numeric',
-            'keterangan' => 'required'
         ]);
 
         $pelanggan = Pelanggan::create($request->all());
-
-        return response()->json($pelanggan);
+        if ($pelanggan) {
+            return response()->json([
+                'pesan' => 'Data sudah dimasukkan',
+                'data' => $pelanggan
+            ]);
+        }
     }
 
     /**
@@ -85,8 +88,13 @@ class PelangganController extends Controller
     public function update(Request $request, $id)
     {
         //
-        Pelanggan::where('idpelanggan', $id)->update($request->all());
-        return response()->json("Data sudah update");
+        $pelanggan =  Pelanggan::where('idpelanggan', $id)->update($request->all());
+        if ($pelanggan) {
+            return response()->json([
+                'pesan' => 'Data sudah diupdate',
+                'status' => 201
+            ]);
+        }
     }
 
     /**
@@ -98,7 +106,13 @@ class PelangganController extends Controller
     public function destroy($id)
     {
         //
-        Pelanggan::where('idpelanggan', $id)->delete();
-        return response()->json("Data sudah dihapus");
+        $pelanggan = Pelanggan::where('idpelanggan', $id)->delete();
+
+        if ($pelanggan) {
+            return response()->json([
+                'pesan' => 'Data sudah dihapus',
+                'data' => $pelanggan
+            ]);
+        }
     }
 }
