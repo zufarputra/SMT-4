@@ -83,7 +83,7 @@ const Menu = () => {
                   className="form-control"
                 >
                   {kategori.map((val, index) =>
-                    val.idkategori === idkategori ? (
+                    val.idkategori ===  idkategori ? (
                       <option key={index} selected value={val.idkategori}>
                         {val.kategori}
                       </option>

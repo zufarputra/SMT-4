@@ -54,4 +54,12 @@ $router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($ro
     $router->get('menu/{id}', ['uses' => 'MenuController@show']);
 
     $router->post('menu/{id}', ['uses' => 'MenuController@update']);
+
+    $router->get('order', ['uses' => 'OrderController@index']);
+
+    $router->put('order/{id}', ['uses' => 'OrderController@update']);
+
+    $router->get('order/{a}/{b}', ['uses' => 'OrderController@show']);
+
+    $router->get('detail/{a}/{b}', ['uses' => 'DetailController@show']);
 });

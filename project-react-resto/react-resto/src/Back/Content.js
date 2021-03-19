@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import Kategori from "./Kategori";
 import Menu from "./Menu";
 import Pelanggan from "./Pelanggan";
+import Order from "./Order";
+import Detail from "./Detail";
 
 const Content = () => {
   const { isi } = useParams();
@@ -16,13 +18,15 @@ const Content = () => {
   if (isi === "pelanggan") {
     tampil = <Pelanggan />;
   }
+  if (isi === "order") {
+    tampil = <Order />;
+  }
 
-  return (
-    <>
-    {tampil}
-    </>
-  );
- 
+  if (isi === "detail") {
+    tampil = <Detail />;
+  }
+
+  return <>{tampil}</>;
 };
 
 export default Content;
