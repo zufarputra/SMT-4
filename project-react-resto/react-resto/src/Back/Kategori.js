@@ -1,11 +1,10 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { link } from "../Axios/link";
 import { useForm } from "react-hook-form";
-import useGet from '../Hook/useGet';
-
+import useGet from "../Hook/useGet";
 
 const Kategori = () => {
- // const [isi, setIsi] = useState([]);
+  // const [isi, setIsi] = useState([]);
 
   const [pesan, setPesan] = useState("");
   const [idkategori, setIdkategori] = useState("");
@@ -18,7 +17,7 @@ const Kategori = () => {
   //   setIsi(request.data);
   // }
 
-  const [isi] = useGet('/kategori');
+  const [isi] = useGet("/kategori");
 
   function simpan(data) {
     if (pilihan) {
@@ -91,8 +90,10 @@ const Kategori = () => {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="kategori" className="form-label"></label>
-              <input type="submit" className="btn btn-dark" name="kategori" />
+              <label htmlFor="keterangan" className="form-label">
+                Keterangan
+              </label>
+              <input type="text" className="btn btn-dark" name="keterangan" />
             </div>
           </form>
         </div>
