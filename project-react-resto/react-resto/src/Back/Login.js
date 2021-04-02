@@ -1,14 +1,30 @@
 import React from "react";
 import { link } from "../Axios/link";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const { register, handleSubmit, reset, errors, setValue } = useForm();
+  const history = useHistory();
 
   async function login(data) {
     const res = await link.post("/login", data);
+
+    let token = await res.data.token;
+
+    sessionStorage.setItem("token", token);
+    sessionStorage.setItem("email", res.data.data.email);
+    sessionStorage.setItem("level", res.data.data.level);
+
     reset();
+
+    if (gettoken() != "undefined") {
+      history.push("/admin");
+      window.location.reload();
+    }
   }
+
+  const gettoken = () => sessionStorage.getItem("token");
 
   return (
     <div>
